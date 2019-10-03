@@ -1,0 +1,73 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Helvetica', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    background-color: #707070;
+    padding-top: 24px;
+    width: 100%;
+    max-width: 1500px;
+    height: 319px;
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.header__up-title { /*um seleção de produtos*/
+    font-family: "Helvetica Neue Regular", sans-serif;
+    text-align: center;
+    height: 20px;
+    font-size: 20px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.header__subtitle {/*especial para você*/
+    height: 48px;
+    font-family: "Helvetica Neue Bold", sans-serif;
+    font-size: 40px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.header__subtitle--description { /*Todos os produtos foram selecionados a partir da sua navegação.Aproveite!*/
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px ;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    margin: 24;
+}
+
+.btn--links {
+    margin-top: 50px;
+}
+
+.btn--white {
+    display: inline-block;
+    color: #888888;
+    background-color:#FFFFFF;
+    border: 1px solid #707070;
+    box-shadow: 0px 1px 6px #00000029;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 160px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.footer-copyright__text {
+    color: grey;
+    font-weight: lighter;
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
