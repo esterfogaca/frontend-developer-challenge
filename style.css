@@ -120,12 +120,22 @@ body {
     margin: 44px;
 }
 
+.btn--send--now {
+    color: #888888;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    font-size: 16px;
+    font: "Helvetica Neue Regular";
+    margin: 50px;
+    width: 260px;
+    height: 39px;
+}
+
 .footer {
     background-color: #707070;
     height: 201px;
     margin: 0;
     border: 1px solid #707070;
-    width: 1500px;
     top: 1828px;
 }
 
