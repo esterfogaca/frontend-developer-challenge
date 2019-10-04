@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-.container {
+.container--header {
     background-color: #707070;
     padding-top: 24px;
     width: 100%;
@@ -61,6 +61,19 @@ body {
     margin: 0 20px;
     font-size: 0.875rem;
     text-align: center;
+}
+
+.container--section {
+    width: 100%;
+    text-align: center;
+}
+
+.text-special-selection {
+    color: #888888;
+    font-size: 18px;
+    font: "Helvetica Neue Bold";
+    margin: 48.67px;
+
 }
 
 .footer-copyright__text {
