@@ -110,14 +110,31 @@ body {
     color: #888888;
     font-size: 18px;
     font: "Helvetica Neue Bold";
-    margin: 164px;
 }
 
 .friends--share {
     color: #888888;
     font-size: 14px;
+    height: 16px;
     font: "Helvetica Neue Regular";
     margin: 44px;
+}
+
+.form {
+    border: 1px #707070;
+    font-size: 12px;
+    color: #888888;
+}
+
+.field--wrapper {
+    display: inline-block;
+    text-align: left;
+    margin-right: 40px;
+}
+
+.form--info {
+    width: 340px;
+    height: 30px;
 }
 
 .btn--send--now {
