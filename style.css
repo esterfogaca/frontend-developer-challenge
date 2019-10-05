@@ -4,7 +4,7 @@
 
 body {
     background-color: #FFFFFF;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica', Neue, sans-serif;
     width: 100%;
     margin: 0;
 }
@@ -19,7 +19,6 @@ body {
     background-color: #707070;
     padding-top: 24px;
     width: 100%;
-    max-width: 1500px;
     height: 319px;
     text-align: center;
     font-family: "Helvetica Neue", sans-serif;
@@ -81,12 +80,18 @@ body {
     margin: 48.67px;
 }
 
-.container--products {
+.cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 80%;
+    grid-template-columns: repeat(4, 200px);
+    width: 923px;
     margin: 0 auto;
     gap: 39px 41px;
+}
+
+.card {
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
 }
 
 .product {
@@ -118,6 +123,7 @@ body {
     height: 16px;
     font: "Helvetica Neue Regular";
     margin: 44px;
+    font-weight: lighter;
 }
 
 .form {
