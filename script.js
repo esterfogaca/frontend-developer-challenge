@@ -22,20 +22,20 @@ const injectProjects = ({ products, nextPage }) => {
                     </div>
                     <h2 class="card__name">${product.name}</h2>
                     <p class="card__description">${product.description}</p>
-                    <p class="card__oldPrice">De: R$${product.oldPrice}</p>
-                    <h3 class="card__price">Por: R$${product.price}</h3>
-                    <p class="card__installments">ou ${product.installments.count}x de R$${product.installments.value}</p>
+                    <p class="card__oldPrice">De: R$${product.oldPrice.toFixed(2)}</p>
+                    <h3 class="card__price">Por: R$${product.price.toFixed(2)}</h3>
+                    <p class="card__installments">ou ${product.installments.count}x de R$${product.installments.value.toFixed(2)}</p>
                     <button class="card__button">Comprar</button>
                 </div>
             `;
         }
     }
 
-    const cardsButton = document.querySelector('.btn--products');
-    cardsButton.onclick = () => getProducts(nextPage);
-
     const cardContainer = document.querySelector('.cards');
     cardContainer.innerHTML += content;
+
+    const cardsButton = document.querySelector('.btn--products');
+    cardsButton.onclick = () => getProducts(nextPage);
 };
 
 getProducts();
