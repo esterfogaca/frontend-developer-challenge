@@ -26,7 +26,10 @@ npm run build
 ```
 
 ### Live Preview:
-https://esterfcantarim-linx.netlify.com
+[https://linx-front-end-challenge.surge.sh](https://linx-front-end-challenge.surge.sh)
+or
+[https://linx-front-end-challenge.netlify.com](https://linx-front-end-challenge.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e153bbc3-96ef-4b3c-95d1-f11b6c8d245b/deploy-status)](https://app.netlify.com/sites/linx-front-end-challenge/deploys)
 
 
 ### Documentation:
@@ -48,8 +51,8 @@ This function receives an url (the default value is 'frontend-intern-challenge-a
 This function receives a json data object, and then creates the required html for the cards in the .products__list element in the webpage. When it's done, it removes the .products__loading--active class and updates the .products__button link so that it calls the getProducts function with the next page url from the api.
 
 ## Changelog:
-- Added (Parcel.js)[http://parceljs.org] to the project
-- Added (Sass)[http://sass-lang.com] to the project
+- Added [Parcel.js](http://parceljs.org) to the project
+- Added [Sass](http://sass-lang.com) to the project
 - Re-worked the project's architecture
 - Re-factored the project's HTML to be more semantic
 - Re-factored the project's styling to be more modular
