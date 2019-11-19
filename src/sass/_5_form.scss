@@ -1,0 +1,52 @@
+.share {
+    padding-bottom: 3.125rem;
+
+    &__title {
+        color: #888888;
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        color: #888888;
+        font-size: .875rem;
+        height: 1rem;
+        margin: 2.75rem auto;
+    }
+
+    &__form {
+        border: .0625rem #707070;
+        font-size: .75rem;
+        color: #888888;
+    }
+
+    &__fieldset {
+        display: inline-block;
+        text-align: left;
+        border: none;
+    }
+
+    &__label {
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    &__input {
+        width: 21.25rem;
+        max-width: 90vw;
+        height: 1.875rem;
+    }
+
+    &__button {
+        cursor: pointer;
+        display: block;
+        color: #888888;
+        border: .0625rem solid #707070;
+        border-radius: .25rem;
+        font-size: 1rem;
+        margin: 0 auto;
+        margin-top: 3.125rem;
+        width: 16.5rem;
+        height: 2.4375rem;
+    }
+}

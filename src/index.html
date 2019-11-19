@@ -5,61 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Uma seleção de produtos especial para você</title>
     <link rel="stylesheet" href="sass/main.scss">
 </head>
 <body>
     <header class="container header">
-        <p class="header__up-title">uma seleção de produtos</p>
-        <h1 class="header__subtitle">especial para você</h1>
-        <p class="header__subtitle--description">Todos os produtos foram selecionados a partir da sua navegação. Aproveite!</p>
-        <div class="btn--links">
-            <a href="https://www.linx.com.br" target="_blank"><button class="btn--white">Conheça a Linx</button></a>
-            <a href="#"><button class="btn--white">Ajude o algoritmo</button></a>
-            <a href="#"><button class="btn--white">Seus produtos</button></a>
-            <a href="#"><button class="btn--white">Compartilhe</button></a>
-        </div>
+        <h1 class="header__title">
+            <small>uma seleção de produtos</small><br />
+            especial para você
+        </h1>
+        <p class="header__subtitle">Todos os produtos foram selecionados a partir da sua navegação. Aproveite!</p>
+        <nav class="header__navigation">
+            <ul class="header__menu">
+                <li><a class="header__button" href="https://linx.com.br" target="_blank">Conheça a Linx</a></li>
+                <li><a class="header__button" href="https://github.com/esterfogaca/frontend-developer-challenge" target="_blank">Ajude o algoritmo</a></li>
+                <li><a class="header__button" href="#products">Seus produtos</a></li>
+                <li><a class="header__button" href="#share">Compartilhe</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <section id="products" class= "container products">
+            <p class="products__title">Sua seleção especial</p>
 
-        <div class= "container--section">
-            <p class="text--special--selection">Sua seleção especial</p>
-        </div>
+            <div class="products__list">
+            </div>
 
-        <div class="cards">
-        </div>
+            <div class="products__loading products__loading--active">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <rect x="17.5" y="30" width="15" height="40" fill="#707070">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.25s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.25s"></animate>
+                    </rect>
+                    <rect x="42.5" y="30" width="15" height="40" fill="#707070">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.125s"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.125s"></animate>
+                    </rect>
+                    <rect x="67.5" y="30" width="15" height="40" fill="#707070">
+                        <animate attributeName="y" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                        <animate attributeName="height" repeatCount="indefinite" dur="1.25s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                    </rect>
+                </svg>
+            </div>
 
-        <div class="container form">
-            <button class="btn--products">
+            <button class="products__button">
                 Ainda mais produtos aqui!
             </button>
-            <p class="share--theNew">Compartilhe a novidade</p>
-            <p class="friends--share">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-            <form action="#" method="post">
-                <div class="form">
-                    <div class="field--wrapper">
-                    <label for="name">Nome do seu amigo:</label><br/>
-                    <input class="form--info" type="text" name="name">
-                    </div>
-                    <div class="field--wrapper">
-                    <label for="email">E-mail:</label><br/>
-                    <input class="form--info" type="email" name="email">
-                    </div>
-                </div>
-            <a href="#"><button class="btn--send--now">Enviar agora</button></a>
-        </div>
+        </section>
+
+        <section id="share" class="container share">
+            <p class="share__title">Compartilhe a novidade</p>
+            <p class="share__subtitle">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
+            <form class="share__form" action="#" method="post">
+                <fieldset class="share__fieldset">
+                    <label class="share__label" for="name">Nome do seu amigo:</label><br/>
+                    <input id="name" class="share__input" type="text" name="name">
+                </fieldset>
+                <fieldset class="share__fieldset">
+                    <label class="share__label" for="email">E-mail:</label><br/>
+                    <input id="email" class="share__input" type="email" name="email">
+                </fieldset>
+                <button class="share__button" onclick="alert('Enviado com sucesso!')">Enviar agora</button>
+            </form>
+        </section>
 
     </main>
 
     <footer class="container footer">
-         <div class="footer-copyright">
-             <p class="footer-copyright__text">
+             <p class="footer__copyright">
                 Copyright 2019  / Feito com muito amor pela Ester
                 <br />
                 para a Linx maravilhosa ❤
              </p>
-         </div>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>

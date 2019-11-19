@@ -1,15 +1,31 @@
-function getProducts(url = 'frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1') {
-  fetch(`https://${url}`)
-    .then(response => { return response.json(); } )
-    .then(data => injectProjects(data))
-    .catch(function(error) {
-        console.log('There has been a problem fetching the product list: ' + error.message);
-    });
+var timerId;
+
+function throttleFunction (func, delay) {
+	if (timerId) {
+		return
+	}
+
+	timerId  =  setTimeout(function () {
+		func()
+		timerId  =  undefined;
+	}, delay)
 }
 
-const injectProjects = ({ products, nextPage }) => {
+function getProducts(url = 'frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1') {
+    var loadingEl = document.querySelector('.products__loading');
+    loadingEl.classList.add('products__loading--active');
 
-    let content = '';
+    fetch(`https://${url}`)
+        .then(response => { return response.json(); } )
+        .then(data => injectProjects(data))
+        .catch(function(error) {
+            console.log('There has been a problem fetching the product list: ' + error.message);
+        });
+}
+
+function injectProjects({ products, nextPage }) {
+
+    var content = '';
     
     if (products) {
         for (product of products) {
@@ -29,11 +45,16 @@ const injectProjects = ({ products, nextPage }) => {
         }
     }
 
-    const cardContainer = document.querySelector('.cards');
+    var loadingEl = document.querySelector('.products__loading');
+    loadingEl.classList.remove('products__loading--active');
+
+    var cardContainer = document.querySelector('.products__list');
     cardContainer.innerHTML += content;
 
-    const cardsButton = document.querySelector('.btn--products');
-    cardsButton.onclick = () => getProducts(nextPage);
+    var cardsButton = document.querySelector('.products__button');
+    cardsButton.onclick = function() { throttleFunction( function () {
+        getProducts(nextPage);
+    }, 1000 ) };
 };
 
 getProducts();

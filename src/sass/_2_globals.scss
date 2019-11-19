@@ -15,6 +15,14 @@ body {
     }
 }
 
+main {
+    background-color: $background-main;
+}
+
+button {
+    background: none;
+}
+
 .container {
     width: 100%;
     text-align: center;

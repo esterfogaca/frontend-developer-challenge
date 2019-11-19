@@ -1,44 +1,67 @@
 .header {
+    box-sizing: border-box;
+    min-height: 20rem;
+    padding-top: 3rem;
+    
     background-color: $background-header;
-    padding-top: 1.5rem;
-    width: 100%;
-    height: 20rem;
-    text-align: center;
     color: $color-header;
-}
 
-.header__up-title { 
-    text-align: center;
-    height: 1.25rem;
-    font-size: 1.25rem;  
-}
+    &__title {
+        margin: 0 auto;
+        font-size: 2.5rem;
+        
+        small {
+            font-size: 1.25rem;
+        }
+    }
 
-.header__subtitle {
-    height: 3rem;
-    font-weight: bold;
-    font-size: 2.5rem; 
-}
+    &__subtitle {
+        font-size: 1rem; 
+        margin-top: 1.5rem;
+    }
 
-.header__subtitle--description {
-    font-size: 1rem;
-    margin: 1.5rem;
-}
+    &__navigation {
+        margin-top: 3.125rem;
+    }
 
-.btn--links {
-    margin-top: 3.125rem;
-}
+    &__menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+        padding-bottom: 2rem;
+        list-style: none;
 
-.btn--white {
-    display: inline-block;
-    color: #888888;
-    background-color:#FFFFFF;
-    border: .0625rem solid #707070;
-    box-shadow: 0 .0625rem .375rem #00000029;
-    border-radius: .25rem;
-    text-decoration: none;
-    width: 10rem;
-    height: 2.5rem;
-    margin: 0 1.25rem;
-    font-size: 0.875rem;
-    text-align: center;
+        @media screen and (min-width: $media-query-tablet) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 47.5rem;
+            padding-bottom: 0;
+        }
+    }
+
+    &__button {
+        display: grid;
+        place-items: center;
+        color: #888888;
+        background-color:#FFFFFF;
+        border: .0625rem solid #707070;
+        box-shadow: 0 .0625rem .375rem #00000029;
+        border-radius: .25rem;
+        min-width: 10rem;
+        height: 2.5rem;
+        margin: 0;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: all .7s ease;
+
+        &:hover {
+            position: relative;
+            bottom: .1rem;
+            box-shadow: 0 1rem 1rem #00000029;
+        }
+    }
 }
