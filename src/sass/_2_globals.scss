@@ -1,0 +1,22 @@
+body {
+    background-color: $background-body;
+    font-family: $font-family-body;
+    font-size: $font-size-mobile;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+
+    @media screen and (min-width: $media-query-tablet) {
+        font-size: $font-size-tablet;
+    }
+
+    @media screen and (min-width: $media-query-desktop) {
+        font-size: $font-size-desktop;
+    }
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}

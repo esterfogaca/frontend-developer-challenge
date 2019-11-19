@@ -1,13 +1,11 @@
-
-async function getProductsAsync(url) {
-  let response = await fetch(`https://${url}`);
-  let data = await response.json()
-  return data;
+function getProducts(url = 'frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1') {
+  fetch(`https://${url}`)
+    .then(response => { return response.json(); } )
+    .then(data => injectProjects(data))
+    .catch(function(error) {
+        console.log('There has been a problem fetching the product list: ' + error.message);
+    });
 }
-
-const getProducts = (url = 'frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1') => {
-    getProductsAsync(url).then(data => injectProjects(data)); 
-};
 
 const injectProjects = ({ products, nextPage }) => {
 

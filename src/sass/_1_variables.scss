@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../assets/helveticaneue.ttf") format("truetype");
+}
+
+$media-query-mobile: 350px;
+$media-query-tablet: 720px;
+$media-query-desktop: 1200px;
+
+$font-family-body: "Helvetica Neue", sans-serif;
+$font-size-mobile: 4.5vw;
+$font-size-tablet: 2.5vw;
+$font-size-desktop: 16px;
+
+$background-body: #FFFFFF;
+$background-header: #707070;
+$color-header: #FFFFFF

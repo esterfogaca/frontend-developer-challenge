@@ -1,0 +1,44 @@
+.header {
+    background-color: $background-header;
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    color: $color-header;
+}
+
+.header__up-title { 
+    text-align: center;
+    height: 1.25rem;
+    font-size: 1.25rem;  
+}
+
+.header__subtitle {
+    height: 3rem;
+    font-weight: bold;
+    font-size: 2.5rem; 
+}
+
+.header__subtitle--description {
+    font-size: 1rem;
+    margin: 1.5rem;
+}
+
+.btn--links {
+    margin-top: 3.125rem;
+}
+
+.btn--white {
+    display: inline-block;
+    color: #888888;
+    background-color:#FFFFFF;
+    border: .0625rem solid #707070;
+    box-shadow: 0 .0625rem .375rem #00000029;
+    border-radius: .25rem;
+    text-decoration: none;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 0 1.25rem;
+    font-size: 0.875rem;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "frontend-developer-challenge",
+  "version": "1.0.0",
+  "description": "## Run the project:  ``` npx live-server --port=8080 ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esterfogaca/frontend-developer-challenge.git"
+  },
+  "author": "Ester Fogaça Cantarim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esterfogaca/frontend-developer-challenge/issues"
+  },
+  "homepage": "https://github.com/esterfogaca/frontend-developer-challenge#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.6"
+  },
+  "dependencies": {}
+}
