@@ -1,12 +1,12 @@
 var timerId;
 
-function throttleFunction (func, delay) {
+function throttleFunction (callback, delay) {
 	if (timerId) {
 		return
 	}
 
 	timerId  =  setTimeout(function () {
-		func()
+		callback()
 		timerId  =  undefined;
 	}, delay)
 }
@@ -23,12 +23,12 @@ function getProducts(url = 'frontend-intern-challenge-api.iurykrieger.now.sh/pro
         });
 }
 
-function injectProjects({ products, nextPage }) {
+function injectProjects(data) {
 
     var content = '';
     
-    if (products) {
-        for (product of products) {
+    if (data.products) {
+        for (product of data.products) {
             content += `
                 <div class="card">
                     <div class="card__image">
@@ -53,7 +53,7 @@ function injectProjects({ products, nextPage }) {
 
     var cardsButton = document.querySelector('.products__button');
     cardsButton.onclick = function() { throttleFunction( function () {
-        getProducts(nextPage);
+        getProducts(data.nextPage);
     }, 1000 ) };
 };
 
